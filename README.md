@@ -1,4 +1,4 @@
-# Breast-Cancer-Grading
+# Breast Cancer Grading 
 Web based AI Grading for Breast Cancer IHC Markers
 
 To find:

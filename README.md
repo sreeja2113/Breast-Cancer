@@ -7,8 +7,6 @@ To find:
 (3.) Breast Cancer cell classification on patches obtained from a WSI
 
 
-https://github.com/NidhiTornekar/Breast-Cancer-Grading/assets/121748841/c3b32dd5-a161-4ad4-aad4-2a866365c8bc
-
 
 Datasets Used : EndoNuke(for Endometrium Cell Detection), Miccai 2015(for Mitotic Cell Detection) and IHC Breast WSI
 Model : YOLOv5

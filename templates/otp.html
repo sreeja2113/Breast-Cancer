@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OTP Verification</title>
+  </head>
+  <body>
+    <h2>OTP Verification</h2>
+    <p style="color: red">{{ error }}</p>
+
+
+    <form method="POST" action="/otp">
+      <input type="text" name="otp" placeholder="Enter OTP" required />
+      <input type="hidden" name="email" value="{{ email }}" />
+      <input type="submit" value="Verify" />
+    </form>
+  </body>
+</html>

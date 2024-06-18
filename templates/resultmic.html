@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YOLOv5 Cell Mitosis - Result</title>
+    <style>
+        .image-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-container img {
+            margin: 10px;
+        }
+
+        .image-heading {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>YOLOv5 Mitosis Detection - Result</h1>
+    
+    <div class="image-container">
+        <div>
+            <h2 class="image-heading">Input Image</h2>
+            <img src="{{ url_for('static', filename='/temp.jpg') }}" alt="Actual Input Image" />
+        </div>
+        <div>
+            <h2 class="image-heading">Ground Image</h2>
+            <img src="{{ url_for('static', filename=uploaded_filename) }}" alt="Ground Truth" />
+        </div>
+        <div>
+            <h2 class="image-heading">Predicted Image</h2>
+                <img src="{{ url_for('static', filename='/predicted.jpg') }}" alt="Predicted Image" />
+            </div>
+        </div>
+    </body>
+    </html>

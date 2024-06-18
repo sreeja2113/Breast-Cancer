@@ -1,0 +1,44 @@
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      input[type="submit"] {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+    <title>YOLOv5</title>
+  </head>
+  <body>
+    <h1>YOLOv5</h1>
+
+    <form method="GET" action="/breast">
+      <input type="submit" value="Breast" />
+    </form>
+
+    <form method="GET" action="/endonuke">
+      <input type="submit" value="Endonuke" />
+    </form>
+    <form method="GET" action="/miccai">
+      <input type="submit" value="Miccai" />
+    </form>
+  </body>
+</html>

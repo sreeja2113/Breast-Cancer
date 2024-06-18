@@ -1,0 +1,146 @@
+{% include 'header.html' %}
+
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .image-heading {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .image-container img {
+      margin: 10px;
+      max-width: 300px;
+      height: auto;
+    }
+
+    .class-counts {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    table {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid #333;
+    }
+
+    .color-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  </style>
+  <head>
+    <title>YOLOv5</title>
+    <style>
+      .image-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .image-container img {
+        margin: 10px;
+      }
+
+      .image-heading {
+        text-align: center;
+      }
+
+      .class-counts {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>YOLOv5</h1>
+
+    <div class="image-container">
+      <div>
+        <h2 class="image-heading">Input Image</h2>
+        <img
+          src="{{ url_for('static', filename='temp.png') }}"
+          alt="Actual Input Image"
+        />
+      </div>
+      <div>
+        <h2 class="image-heading">Predicted Image</h2>
+        <img
+          src="{{ url_for('static', filename='predicted.png') }}"
+          alt="Predicted Image"
+        />
+      </div>
+    </div>
+
+    <div class="class-counts">
+      <h3>Class Counts</h3>
+      <div style="margin: 0; padding: 0;">
+        <h5 style="margin: 0;">Class 0: {{ class_counts['class0'] }}</h5>
+        <h5 style="margin: 0;">Class 1: {{ class_counts['class1'] }}</h5>
+        <h5 style="margin: 0;">Class 2: {{ class_counts['class2'] }}</h5>
+        <h5 style="margin: 0;">Class 3: {{ class_counts['class3'] }}</h5>
+        <h6></h6>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>RGB Color</th>
+          <th>Color</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Class 0 (blue)</td>
+          <td>(255, 0, 0)</td>
+          <td><span class="color-circle" style="background-color: rgb(255,0,0);"></span></td>
+        </tr>
+        <tr>
+          <td>Class 1 (weak)</td>
+          <td>(255, 182, 193)</td>
+          <td><span class="color-circle" style="background-color: rgb(255, 182, 193);"></span></td>
+        </tr>
+        <tr>
+          <td>Class 2 (moderate)</td>
+          <td>(255, 255, 0)</td>
+          <td><span class="color-circle" style="background-color: rgb(255, 255, 0);"></span></td>
+        </tr>
+        <tr>
+          <td>Class 3 (strong)</td>
+          <td>(255, 165, 0)</td>
+          <td><span class="color-circle" style="background-color: rgb(255, 165, 0);"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

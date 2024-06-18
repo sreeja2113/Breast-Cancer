@@ -1,0 +1,42 @@
+{% include 'header.html' %}
+
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    input[type="file"] {
+      margin-top: 10px;
+    }
+
+    input[type="submit"] {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+  <head>
+    <title>YOLOv5 - Breast</title>
+  </head>
+  <body>
+    <h1>YOLOv5 - Breast</h1>
+
+    <form method="POST" action="/breast" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".png, .jpg, .jpeg" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

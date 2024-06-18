@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <script>
+      function storeEmail() {
+        var email = document.getElementById('email').value;
+        localStorage.setItem('email', email);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Sign Up</h2>
+    <form action="/signup" method="POST" onsubmit="storeEmail()">
+      <input type="text" id="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <input
+        type="password"
+        name="re_password"
+        placeholder="Re-enter Password"
+        required
+      />
+      <input type="text" name="phone" placeholder="Phone Number" required />
+  
+      <p style="color: red">{{ error }}</p>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </body>
+</html>

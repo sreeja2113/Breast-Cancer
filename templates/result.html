@@ -1,0 +1,78 @@
+{% include 'header.html' %}
+
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .image-heading {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .image-container img {
+      margin: 10px;
+      max-width: 300px;
+      height: auto;
+    }
+  </style>
+  <head>
+    <title>YOLOv5</title>
+    <style>
+      .image-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .image-container img {
+        margin: 10px;
+      }
+
+      .image-heading {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>YOLOv5</h1>
+
+    <div class="image-container">
+      <div>
+        <h2 class="image-heading">Input Image</h2>
+        <img
+          src="{{ url_for('static', filename='temp.png') }}"
+          alt="Actual Input Image"
+        />
+      </div>
+      <div>
+        <h2 class="image-heading">Ground Image</h2>
+        <img
+          src="{{ url_for('ground_truth', filename=uploaded_filename) }}"
+          alt="Ground Truth"
+        />
+      </div>
+      <div>
+        <h2 class="image-heading">Predicted Image</h2>
+        <img
+          src="{{ url_for('static', filename='predicted.png') }}"
+          alt="Predicted Image"
+        />
+      </div>
+    </div>
+  </body>
+</html>
